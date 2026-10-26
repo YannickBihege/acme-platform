@@ -1,0 +1,61 @@
+customer_id,name,segment,region,updated_at,_extracted_at
+C001,Taylor Rivera,Club,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C002,Sam Lopez,Consumer,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C003,Frankie Meyer,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C004,Alex Stone,Club,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C005,Sam Chen,Consumer,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C006,Alex Haddad,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C007,Gray Haddad,Consumer,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C008,Alex Chen,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C009,Robin Silva,Consumer,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C010,Frankie Okafor,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C011,Sam Haddad,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C012,Taylor Stone,Retail partner,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C013,Frankie Meyer,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C014,Dana Lopez,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C015,Dana Haddad,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C016,Robin Chen,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C017,Sam Haddad,Club,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C018,Taylor Berg,Club,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C019,Sam Lopez,Club,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C020,Taylor Rivera,Club,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C021,Alex Stone,Retail partner,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C022,Taylor Novak,Retail partner,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C023,Frankie Berg,Consumer,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C024,Robin Berg,Retail partner,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C025,Alex Okafor,Retail partner,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C026,Robin Silva,Retail partner,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C027,Alex Berg,Club,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C028,Frankie Stone,Club,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C029,Kim Okafor,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C030,Charlie Silva,Club,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C031,Jo Berg,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C032,Jo Silva,Retail partner,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C033,Harper Silva,Club,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C034,Kim Rivera,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C035,Jo Chen,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C036,Alex Berg,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C037,Robin Okafor,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C038,Charlie Lopez,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C039,Jo Lopez,Retail partner,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C040,Dana Lopez,Club,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C041,Charlie Silva,Consumer,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C042,Gray Silva,Consumer,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C043,Sam Chen,Club,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C044,Sam Novak,Retail partner,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C045,Sam Meyer,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C046,Eli Stone,Club,North,2026-01-15 09:00:00,2026-10-25 02:00:00
+C047,Sam Chen,Retail partner,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C048,Jo Okafor,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C049,Dana Stone,Consumer,West,2026-01-15 09:00:00,2026-10-25 02:00:00
+C050,Dana Berg,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C051,Sam Rivera,Consumer,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C052,Harper Okafor,Club,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C053,Eli Meyer,Consumer,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C054,Jo Lopez,Consumer,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C055,Gray Stone,Retail partner,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C056,Eli Novak,Consumer,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C057,Kim Lopez,Retail partner,East,2026-01-15 09:00:00,2026-10-25 02:00:00
+C058,Gray Chen,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C059,Kim Silva,Retail partner,South,2026-01-15 09:00:00,2026-10-25 02:00:00
+C060,Kim Lopez,Club,East,2026-01-15 09:00:00,2026-10-25 02:00:00

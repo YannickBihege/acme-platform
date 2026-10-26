@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: dim_customers
+    columns:
+      - name: customer_key
+        data_tests: [unique, not_null]
+  - name: dim_products
+    columns:
+      - name: product_key
+        data_tests: [unique, not_null]
+  - name: dim_date
+    columns:
+      - name: date_key
+        data_tests: [unique, not_null]
+  - name: fct_order_lines
+    description: One row per order line or refund line. net_amount is additive.
+    columns:
+      - name: order_line_key
+        data_tests: [unique, not_null]
+      - name: customer_key
+        data_tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_customers'), field: customer_key}}
+      - name: product_key
+        data_tests:
+          - not_null
+          - relationships: {arguments: {to: ref('dim_products'), field: product_key}}
+      - name: date_key
+        data_tests:
+          - relationships: {arguments: {to: ref('dim_date'), field: date_key}}
+      - name: channel
+        data_tests:
+          - accepted_values: {arguments: {values: [erp, webshop]}}
+      - name: line_type
+        data_tests:
+          - accepted_values: {arguments: {values: [sale, refund]}}
+
+unit_tests:
+  - name: refunds_reduce_net_revenue
+    description: A refund line is negative and sums against the sale
+    model: fct_order_lines
+    given:
+      - input: ref('int_order_lines_unioned')
+        rows:
+          - {order_line_id: a, order_id: '1', customer_id: c1, sku: s1, quantity: 2,  net_amount: 40.00, ordered_at: '2026-10-01 10:00:00', channel: webshop, line_type: sale}
+          - {order_line_id: r, order_id: '1', customer_id: c1, sku: s1, quantity: -1, net_amount: -20.00, ordered_at: '2026-10-02 10:00:00', channel: webshop, line_type: refund}
+      - input: ref('dim_customers')
+        rows:
+          - {customer_key: k1, customer_id: c1}
+      - input: ref('dim_products')
+        rows:
+          - {product_key: p1, sku: s1}
+    expect:
+      rows:
+        - {order_line_id: a, net_amount: 40.00, customer_key: k1, product_key: p1}
+        - {order_line_id: r, net_amount: -20.00, customer_key: k1, product_key: p1}

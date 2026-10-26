@@ -1,0 +1,21 @@
+version: 2
+
+# In dev (DuckDB) the sources are the seeds in schema `raw`.
+# On Snowflake they are the tables Hop lands in RAW.ERP.
+sources:
+  - name: erp
+    description: Oracle ERP, exported daily by Apache Hop
+    database: "{{ env_var('RAW_DATABASE', 'RAW') if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'erp' if target.type == 'snowflake' else 'raw' }}"
+    loaded_at_field: _extracted_at
+    freshness:
+      warn_after: {count: 26, period: hour}
+    tables:
+      - name: customers
+        identifier: "{{ 'customers' if target.type == 'snowflake' else 'erp_customers' }}"
+      - name: products
+        identifier: "{{ 'products' if target.type == 'snowflake' else 'erp_products' }}"
+      - name: orders
+        identifier: "{{ 'orders' if target.type == 'snowflake' else 'erp_orders' }}"
+      - name: order_lines
+        identifier: "{{ 'order_lines' if target.type == 'snowflake' else 'erp_order_lines' }}"

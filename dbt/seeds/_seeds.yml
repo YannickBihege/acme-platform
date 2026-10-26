@@ -1,0 +1,6 @@
+version: 2
+seeds:
+  - name: erp_customers
+    config: {column_types: {customer_id: varchar}}
+  - name: erp_orders
+    config: {column_types: {customer_id: varchar}}

@@ -1,0 +1,30 @@
+name: acme
+version: "1.0.0"
+config-version: 2
+profile: acme
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  acme:
+    staging:
+      +materialized: view
+      +tags: ["staging"]
+    intermediate:
+      +materialized: view
+      +tags: ["intermediate"]
+    marts:
+      +materialized: table
+      +tags: ["marts"]
+
+# Seeds stand in for the raw layer, so the project runs on a laptop.
+# On Snowflake, real loaders (dlt, Hop) fill RAW and you do not run `dbt seed`.
+seeds:
+  acme:
+    +schema: raw

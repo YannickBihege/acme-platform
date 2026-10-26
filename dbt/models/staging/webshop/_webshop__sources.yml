@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: webshop
+    description: Web shop REST API, loaded hourly by dlt
+    database: "{{ env_var('RAW_DATABASE', 'RAW') if target.type == 'snowflake' else target.database }}"
+    schema: "{{ 'webshop' if target.type == 'snowflake' else 'raw' }}"
+    tables:
+      - name: orders
+        identifier: "{{ 'orders' if target.type == 'snowflake' else 'webshop_orders' }}"
+        loaded_at_field: "{{ 'to_timestamp(_dlt_load_id::double)' if target.type == 'snowflake' else 'created_at' }}"
+        freshness:
+          warn_after: {count: 3, period: hour}
+      - name: orders__lines
+        identifier: "{{ 'orders__lines' if target.type == 'snowflake' else 'webshop_orders__lines' }}"
+      - name: refunds
+        identifier: "{{ 'refunds' if target.type == 'snowflake' else 'webshop_refunds' }}"

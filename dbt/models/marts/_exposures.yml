@@ -1,0 +1,16 @@
+version: 2
+
+exposures:
+  - name: weekly_sales_dashboard
+    type: dashboard
+    maturity: high
+    url: https://bi.example.com/dashboards/42
+    description: Weekly net revenue by customer segment, channel and product category
+    depends_on:
+      - ref('fct_order_lines')
+      - ref('dim_customers')
+      - ref('dim_products')
+      - ref('dim_date')
+    owner:
+      name: Finance Data Team
+      email: finance-data@example.com
