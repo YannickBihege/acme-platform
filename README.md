@@ -1,6 +1,6 @@
 # acme-platform: companion repository
 
-Companion code for the capstone (Chapter 17) of *The Modern Data Stack on Snowflake: dbt, dlt and Apache Hop*.
+Companion code for the capstone (Chapter 17) of *The Modern Data Stack on Snowflake: dbt, dlt and Apache *.
 The scenario (Acme Outdoor) and all data are invented.
 
 ## Run it in 2 minutes, free, on your laptop
